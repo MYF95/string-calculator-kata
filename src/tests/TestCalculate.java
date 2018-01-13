@@ -43,4 +43,9 @@ public class TestCalculate {
     public void negativeInputReturnsException() throws Exception {
         calculator.calculate("-1");
     }
+
+    @Test
+    public void ignoresNumbersGreaterThanAThousand() throws Exception {
+        Assert.assertEquals(calculator.calculate("10,10,1000"), 20);
+    }
 }
