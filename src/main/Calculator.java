@@ -17,17 +17,20 @@ public class Calculator {
     }
 
     private int getSum(String[] numbers) throws Exception {
+        findDangerousInput(numbers);
+        int sum = 0;
+        for (String current:numbers){
+            sum += stringToInt(current);
+        }
+        return sum;
+    }
+
+    private void findDangerousInput(String[] numbers) throws Exception {
         for (String current:numbers){
             if(stringToInt(current) < 0){
                 throw new Exception("Negative input is not allowed");
             }
         }
-
-        int sum = 0;
-        for (String current:numbers){
-            sum += Integer.parseInt(current);
-        }
-        return sum;
     }
 
     private boolean isEmpty(String input){
