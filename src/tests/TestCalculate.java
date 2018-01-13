@@ -46,6 +46,6 @@ public class TestCalculate {
 
     @Test
     public void ignoresNumbersGreaterThanAThousand() throws Exception {
-        Assert.assertEquals(calculator.calculate("10,10,1000"), 20);
+        Assert.assertEquals(calculator.calculate("10,10,1001"), 20);
     }
 }
