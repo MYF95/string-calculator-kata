@@ -28,4 +28,9 @@ public class TestCalculate {
     public void twoNumbersCommaDelimitedReturnSum(){
         Assert.assertEquals(calculator.calculate("1,2"),3);
     }
+
+    @Test
+    public void twoNumbersNewLineDelimitedReturnSum(){
+        Assert.assertEquals(calculator.calculate("1\n2"),3);
+    }
 }
